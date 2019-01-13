@@ -87,9 +87,9 @@ $(document).ready(function(){
                 clearInterval(countdown);
                 game.empty();
                 unanswered++;
-                game.append($("<div>").text(`Time's up! The correct answer was ${currentQ.options[currentQ.answerIndex]}.`));
+                game.append($("<h3>").text(`Time's up! The correct answer was ${currentQ.options[currentQ.answerIndex]}.`));
                 let resetTime = 3;
-                const resetDiv = $("<div>").text(`Resetting in ${resetTime}`);
+                const resetDiv = $("<div>").addClass("counter").text(`Resetting in ${resetTime}`);
                 game.append(resetDiv);
                 const reset = setInterval(function(){
                     resetTime--;
@@ -114,10 +114,10 @@ $(document).ready(function(){
             }else{
                 incorrect++;
                 game.append($("<h2>").text("Incorrect."));
-                game.append($("<div>").text(`The correct answer was "${currentQ.options[currentQ.answerIndex]}".`));
+                game.append($("<h3>").text(`The correct answer was "${currentQ.options[currentQ.answerIndex]}".`));
             }
             let resetTime = 3;
-            const resetDiv = $("<div>").text(`Resetting in ${resetTime}`);
+            const resetDiv = $("<div>").addClass("counter").text(`Resetting in ${resetTime}`);
             game.append(resetDiv);
             const reset = setInterval(function(){
                 resetTime--;
