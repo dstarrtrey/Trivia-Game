@@ -37,12 +37,25 @@ div{
     font-size: 19px;
 }
 button{
+    background-color: red; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
     text-align: center;
     margin-left: 50%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
 }
+button:active{
+    background-color: #c60005;
+}
 .container{
+    border: 5px solid #aaa5af;
+    border-radius: 20px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -62,13 +75,17 @@ button{
     text-align: center;
 }
 .option{
+
     text-align: center;
     background-color: red;
     margin: 0 10% 20px 10%;
     width: 80%;
     padding: 10px 0;
+    transition: all .25s ease-in-out;
 }
 .option:hover{
+    background-color: #c60005;
+    box-sizing: border-box;
     color: white;
     text-decoration: underline;
 }
